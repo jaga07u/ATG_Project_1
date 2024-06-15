@@ -9,7 +9,7 @@ import { IoTriangle } from "react-icons/io5";
 function Nav() {
 	return (
 		<>
-			<nav className="w-full md:h-[70px] h-8 bg-white flex md:justify-around justify-end items-center">
+			<nav className="w-full md:h-[70px] h-10 bg-white flex md:justify-around justify-end items-center px-4">
 				<div className="w-[162px] h-[50px] md:flex hidden justify-center items-center">
 					<img src="whole.png" alt="" />
 				</div>
@@ -32,7 +32,7 @@ function Nav() {
 						<IoMdArrowDropdown style={{ display: "inline" }} />
 					</p>
 				</div>
-				<div className="flex md:hidden items-center gap-2 text-gray-600">
+				<div className="flex md:hidden items-center gap-3 text-gray-600">
 					<FaSquareFull />
                     <FaCircle />
                     <IoTriangle />
