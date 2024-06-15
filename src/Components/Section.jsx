@@ -3,6 +3,8 @@ import React from 'react'
 import { IoMdArrowDropdown } from "react-icons/io";
 import { BsFillPeopleFill } from "react-icons/bs";
 import Card from './Card';
+import { MdOutlineLocationOn } from "react-icons/md";
+import { FaPen } from "react-icons/fa";
 
 function Section() {
     const menu=["All Posts","Article","Event","Education","Job"];
@@ -75,8 +77,11 @@ function Section() {
                     ))
                   }
               </div>
-              <div className="w-[30%] min-h-[100vh] bg-green-500">
-
+              <div className="w-[30%] h-[50px]  flex justify-center items-center">
+                          <div className="w-[250px] h-[40px] bg-white text-black flex border-b-2 border-b-gray-200   justify-center items-center gap-2  ">
+                          <MdOutlineLocationOn/><input type="text" className="w-[200px] h-[30px] outline-none bg-transparent" placeholder='Enter your location'/>
+                          <FaPen/>
+                          </div>
             </div>
             </div>
         </div>
