@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 function Header() {
-    const [companies, setCompanies] = useState("142,765");
+    const companies = "142,765";
     return (
         <>
             <div 
