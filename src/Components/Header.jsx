@@ -13,7 +13,7 @@ function Header() {
                 <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
                 
                 {/* Content */}
-                <div className="absolute top-[260px] left-[150px] flex justify-center items-center ">
+                <div className="absolute md:top-[260px] md:left-[150px] top-[300px] left-[60px] flex justify-center items-center ">
                     <div>
                         <h1 className="text-3xl font-semibold text-white">Computer Engineering</h1>
                         <p className="text-white">{companies} Computer Engineers follow this</p>

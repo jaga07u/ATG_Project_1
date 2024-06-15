@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full min-h-[100vh] font-ibm-plex-sans">
+      <div className="w-full min-h-[100vh] font-ibm-plex-sans overflow-x-hidden">
         <Nav/>
         <Header/>
         <Section/>
