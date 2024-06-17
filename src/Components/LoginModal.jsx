@@ -64,7 +64,7 @@ const LoginModal = ({ show, handleClose }) => {
 							Create Account
 						</button>
 						<div className="flex flex-col gap-2">
-							<button className="bg-white text-black font-medium py-2 flex items-center justify-center gap-2 border-2 border-gray-400">
+							<button className="bg-white text-black font-medium py-2 flex items-center justify-center gap-2 border border-gray-400">
 								<img
 									src="/fb.png"
 									alt="fb"
@@ -72,7 +72,7 @@ const LoginModal = ({ show, handleClose }) => {
 								/>
 								Sign up with Facebook
 							</button>
-							<button className="bg-white text-black font-medium py-2 flex items-center gap-2 border-2 justify-center border-gray-400">
+							<button className="bg-white text-black font-medium py-2 flex items-center gap-2 border justify-center border-gray-400">
 								<img
 									src="/google.png"
 									alt="google"
@@ -81,6 +81,10 @@ const LoginModal = ({ show, handleClose }) => {
 								Sign up with Google
 							</button>
 						</div>
+                        <span className="text-black md:hidden text-center">
+							By signing up, you agree to our Terms & conditions,
+							Privacy policy
+						</span>
 					</div>
 					<div className="md:flex hidden flex-col h-full justify-between items-end">
 						<span className="text-black font-medium">
