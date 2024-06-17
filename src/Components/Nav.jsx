@@ -1,17 +1,26 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import { FaCircle, FaSquareFull } from "react-icons/fa";
 import { IoTriangle } from "react-icons/io5";
+import LoginModal from "./LoginModal";
 
 function Nav() {
+
+	const [showLogin, setShowLogin] = useState(false);
+
+	const handleClose = () => {
+		setShowLogin(false);
+	}
+
 	return (
 		<>
 			<nav
-				className="w-100 bg-white d-flex justify-content-end justify-content-md-around align-items-center px-4"
+				className="w-100 bg-white d-flex justify-content-end justify-content-md-around align-items-center px-4 relative"
 				style={{ height: "10px", minHeight: "70px" }}>
+					<LoginModal show={showLogin} handleClose={handleClose} />
 				<div
 					className="d-none d-md-flex justify-content-center align-items-center"
 					style={{ width: "162px", height: "50px" }}>
@@ -50,7 +59,7 @@ function Nav() {
 						width: "200px",
 						height: "50px",
 					}}>
-					<p style={{ fontSize: '1rem' }}>
+					<p style={{ fontSize: '1rem' }} onClick={() => setShowLogin(true)}>
 						Create account.{" "}
 						<span style={{ color: '#3b82f6', fontWeight: 'bold' }}>
 							It's free!
