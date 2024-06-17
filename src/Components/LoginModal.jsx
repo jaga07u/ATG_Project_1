@@ -1,3 +1,5 @@
+import { FaTimes } from "react-icons/fa";
+
 /* eslint-disable react/prop-types */
 const LoginModal = ({ show, handleClose }) => {
 	if (!show) {
@@ -5,14 +7,14 @@ const LoginModal = ({ show, handleClose }) => {
 	}
 
 	return (
-		<div className="absolute top-0 left-0 z-50 w-screen h-screen bg-black/40 flex items-center justify-center">
-			<div className="w-screen md:w-2/3 lg:w-1/2 h-fit md:rounded-lg max-md:rounded-t-lg bg-white flex flex-col p-4 p-md-0 md:p-0 overflow-hidden relative">
+		<div className="fixed top-0 left-0 z-50 w-screen h-screen bg-black/50 flex md:items-center items-end justify-center">
+			<div className="w-screen md:w-2/3 lg:w-1/2 h-fit md:rounded-lg max-md:rounded-t-lg bg-white flex flex-col p-4 p-md-0 md:p-0 relative pointer-events-auto">
 				<div
-					className="absolute top-full right-full ml-6 mb-6 bg-white rounded-full h-4 w-4"
+					className="absolute right-0 top-0 transform translate-x-8 -translate-y-8 bg-white rounded-full h-6 w-6 z-50 text-black text-center flex items-center justify-center"
 					onClick={handleClose}>
-					x
+					<FaTimes />
 				</div>
-				<div className="w-full bg-green-300 text-green-600 text-center py-2">
+				<div className="w-full bg-green-300 text-green-600 text-center py-2 md:block hidden rounded-t-lg">
 					Lets learn, share & inspire each other with our passion for
 					computer engineering. Sign up now 🚀
 				</div>
