@@ -59,7 +59,7 @@ function Nav() {
 						width: "200px",
 						height: "50px",
 					}}>
-					<p style={{ fontSize: '1rem' }} onClick={() => setShowLogin(true)}>
+					<p style={{ fontSize: '1rem',cursor:"pointer"  }} onClick={() => setShowLogin(true)}>
 						Create account.{" "}
 						<span style={{ color: '#3b82f6', fontWeight: 'bold' }}>
 							It's free!
