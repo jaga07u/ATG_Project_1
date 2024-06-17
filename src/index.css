@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-ibm-plex-sans {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+    .custom-height-md {
+        height: 70px;
+    }
+}
+
+.form-control::placeholder {
+    color: black;
+}

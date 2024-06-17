@@ -53,55 +53,99 @@ function Section() {
 	];
 	return (
 		<>
-			<div className="md:w-[80%] w-full min-h-[100vh] md:mx-[200px]">
-        <div className="flex md:hidden p-4 items-center justify-between">
-          <span className="text-black font-bold text-xl">
-            Posts (32)
-          </span>
-          <select name="filter" id="filter-select" className="bg-gray-200 rounded-md py-2.5 px-4 font-medium">
-            <option value="All Posts">All Posts</option>
-            <option value="Article">Article</option>
-            <option value="Event">Event</option>
-            <option value="Education">Education</option>
-            <option value="Job">Job</option>
-          </select>
-        </div>
-				<div className="w-full h-[80px] md:flex hidden md:flex-row flex-col justify-between border-b-2 border-b-2-gray-300 items-center bg-white">
-					<div className="md:w-[45%] h-full flex justify-evenly items-center">
+			<div
+				className="w-100 min-vh-100"
+				style={{
+					maxWidth: "80%",
+					marginLeft: "auto",
+					marginRight: "auto",
+				}}>
+				<div className="d-flex d-md-none p-4 align-items-center justify-content-between">
+					<span className="fw-bold fs-4 text-black">Posts (32)</span>
+					<select
+						name="filter"
+						id="filter-select"
+						className="bg-light rounded-2 py-2.5 px-4 fw-medium">
+						<option value="All Posts">All Posts</option>
+						<option value="Article">Article</option>
+						<option value="Event">Event</option>
+						<option value="Education">Education</option>
+						<option value="Job">Job</option>
+					</select>
+				</div>
+				<div
+					className="w-100 d-none d-md-flex flex-md-row justify-content-between align-items-center border-bottom border-gray-300 bg-white"
+					style={{ height: "160px" }}>
+					<div
+						className="d-md-flex d-none justify-content-evenly align-items-center"
+						style={{ width: "45%", height: "100%" }}>
 						{menu.map((items) => (
 							<>
-								<div className="w-[100px] h-[42px] hover:border-b-2 border-b-gray-500 mt-[40px] text-center cursor-pointer">
+								<div
+									className="position-relative"
+									style={{
+										textAlign: "center",
+										width: "100px",
+										height: "42px",
+										marginTop: "40px",
+										cursor: "pointer",
+										borderBottom: "2px solid #6B7280",
+									}}>
 									{items}
 									{items == "All Posts" ? "(32)" : ""}
 								</div>
 							</>
 						))}
 					</div>
-					<div className="md:w-[35%] h-full  md:flex hidden justify-center items-center gap-4  ">
-						<button className="w-[160px] h-[40px] bg-gray-300 ">
+					<div
+						className="d-none d-md-flex justify-content-center align-items-center gap-4"
+						style={{ width: "35%", height: "100%" }}>
+						<button
+							className="bg-secondary"
+							style={{ width: "160px", height: "40px" }}>
 							Write a Post
 							<IoMdArrowDropdown style={{ display: "inline" }} />
 						</button>
-						<button className="w-[160px] h-[40px] bg-blue-600 flex justify-center items-center gap-2 ">
+						<button
+							className="bg-primary d-flex justify-content-center align-items-center gap-2"
+							style={{ width: "160px", height: "40px" }}>
 							<BsFillPeopleFill />
 							Join Group
 						</button>
 					</div>
 				</div>
-				<div className="w-full min-h-[100vh] mt-3 flex">
-					<div className="md:w-[70%] min-h-[100vh] flex flex-col gap-2">
+				<div
+					className="d-flex md:flex-row flex-col"
+					style={{ minHeight: "100vh", marginTop: "0.75rem" }}>
+					<div
+						className="d-flex flex-column gap-2 w-full md:w-[70%]"
+						style={{ minHeight: "100vh"}}>
 						{posts.map((items, index) => (
 							<>
 								<Card key={index} {...items} />
 							</>
 						))}
 					</div>
-					<div className="md:w-[30%] h-[50px] md:flex hidden justify-center items-center">
-						<div className="w-[250px] h-[40px] bg-white text-black flex border-b-2 border-b-gray-200   justify-center items-center gap-2  ">
+					<div
+						className="md:flex hidden justify-content-center align-items-center"
+						style={{ width: "30%", height: "50px" }}>
+						<div
+							className="bg-white text-black d-md-flex align-items-center justify-content-center border-bottom border-gray-200"
+							style={{
+								width: "250px",
+								height: "40px",
+								gap: "0.5rem",
+							}}>
 							<MdOutlineLocationOn />
 							<input
 								type="text"
-								className="w-[200px] h-[30px] outline-none bg-transparent"
+								className="d-inline-block"
+								style={{
+									width: "200px",
+									height: "30px",
+									outline: "none",
+									backgroundColor: "transparent",
+								}}
 								placeholder="Enter your location"
 							/>
 							<FaPen />

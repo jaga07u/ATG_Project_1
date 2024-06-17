@@ -7,15 +7,24 @@ function Header() {
 	return (
 		<>
 			<div
-				className="relative w-full h-[400px] bg-cover bg-center"
-				style={{ backgroundImage: "url('Rectangle 2.png')" }}>
+				className="position-relative w-100"
+				style={{
+					backgroundImage: "url('Rectangle 2.png')",
+					height: "400px",
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+				}}>
 				{/* Overlay for reducing brightness */}
-				<div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
+				<div
+					className="position-absolute top-0 start-0 w-100 h-100 bg-black"
+					style={{ opacity: "0.6" }}></div>
 
 				{/* Content */}
-				<div className="absolute md:top-[260px] md:left-[150px] top-[300px] left-[60px] flex justify-center items-center ">
+				<div
+					className="position-absolute d-flex justify-content-center align-items-center"
+					style={{ top: "280px", left: "60px" }}>
 					<div>
-						<h1 className="text-3xl font-semibold text-white">
+						<h1 className="display-6 fw-semibold text-white">
 							Computer Engineering
 						</h1>
 						<p className="text-white">

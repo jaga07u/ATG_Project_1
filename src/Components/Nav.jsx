@@ -9,33 +9,59 @@ import { IoTriangle } from "react-icons/io5";
 function Nav() {
 	return (
 		<>
-			<nav className="w-full md:h-[70px] h-10 bg-white flex md:justify-around justify-end items-center px-4">
-				<div className="w-[162px] h-[50px] md:flex hidden justify-center items-center">
+			<nav
+				className="w-100 bg-white d-flex justify-content-end justify-content-md-around align-items-center px-4"
+				style={{ height: "10px", minHeight: "70px" }}>
+				<div
+					className="d-none d-md-flex justify-content-center align-items-center"
+					style={{ width: "162px", height: "50px" }}>
 					<img src="whole.png" alt="" />
 				</div>
-				<div className="w-[380px] h-[50px] bg-gray-100 md:flex hidden justify-center items-center gap-4 rounded-full border-none">
+				<div
+					className="d-none d-md-flex justify-content-center align-items-center"
+					style={{
+						width: "380px",
+						height: "50px",
+						backgroundColor: "#f5f5f5",
+						gap: "1rem",
+						borderRadius: "50px",
+						border: "none",
+					}}>
 					<CiSearch
 						style={{ marginLeft: "30px", fontSize: "24px" }}
 					/>
 					<input
 						type="text"
-						className="w-[350px] h-[50px] rounded-full outline-none bg-transparent text-black placeholder:text-black"
+						className="form-control"
+						style={{
+							width: "350px",
+							height: "50px",
+							borderRadius: "50px",
+							outline: "none",
+							backgroundColor: "transparent",
+							color: "black",
+						}}
 						placeholder="Search for your favorite groups in ATG"
 					/>
 				</div>
-				<div className="w-[200px] h-[50px] md:flex hidden justify-center items-center ">
-					<p className="font-medium">
+				<div
+					className="d-none d-md-flex justify-content-center align-items-center"
+					style={{
+						width: "200px",
+						height: "50px",
+					}}>
+					<p style={{ fontSize: '1rem' }}>
 						Create account.{" "}
-						<span className="text-blue-500 font-bold">
+						<span style={{ color: '#3b82f6', fontWeight: 'bold' }}>
 							It's free!
 						</span>
 						<IoMdArrowDropdown style={{ display: "inline" }} />
 					</p>
 				</div>
-				<div className="flex md:hidden items-center gap-3 text-gray-600">
+				<div className="d-flex d-md-none align-items-center gap-3 text-gray-600">
 					<FaSquareFull />
-                    <FaCircle />
-                    <IoTriangle />
+					<FaCircle />
+					<IoTriangle />
 				</div>
 			</nav>
 		</>
