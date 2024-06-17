@@ -8,9 +8,9 @@ const LoginModal = ({ show, handleClose }) => {
 
 	return (
 		<div className="fixed top-0 left-0 z-50 w-screen h-screen bg-black/50 flex md:items-center items-end justify-center">
-			<div className="w-screen md:w-2/3 lg:w-1/2 h-fit md:rounded-lg max-md:rounded-t-lg bg-white flex flex-col p-4 p-md-0 md:p-0 relative pointer-events-auto">
+			<div className="w-screen md:w-2/3 lg:w-1/2 h-fit md:rounded-lg max-md:rounded-t-lg bg-white flex flex-col p-0 relative pointer-events-auto">
 				<div
-					className="absolute right-0 top-0 transform translate-x-8 -translate-y-8 bg-white rounded-full h-6 w-6 z-50 text-black text-center flex items-center justify-center"
+					className="absolute right-0 top-0 transform md:translate-x-8 md:-translate-y-8 -translate-x-6 translate-y-6 bg-white rounded-full h-6 w-6 z-50 text-black text-center flex items-center justify-center"
 					onClick={handleClose}>
 					<FaTimes />
 				</div>
